@@ -75,10 +75,6 @@ public class TodoSteps {
     @When("I create a todo with title {string} using XML format")
     public void createTodoXml(String title) {
         String xmlBody = "<todo><title>" + title + "</title></todo>";
-        // Important: the TodoManager API is strict about the content-type matching exactly
-        // "application/xml" (no charset parameter). If a charset is present, it may parse as JSON and return 400.
-        //
-        // ApiClient.request() always sets JSON content-type, so we bypass it here and send raw bytes with an exact header.
         TestContext.lastResponse = RestAssured.given()
                 .config(RestAssuredConfig.config().encoderConfig(
                         EncoderConfig.encoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false)
@@ -161,51 +157,49 @@ public class TodoSteps {
     }
 
     @When("I add a new category with title {string} to todo {string}")
-    public void addNewCategoryToTodo(String categoryTitle, String todoTitle) {
-        String todoId = getTodoIdByTitle(todoTitle);
-        String body = String.format("{\"title\":\"%s\",\"description\":\"\"}", escapeJson(categoryTitle));
+    public void addNewCategoryToTodo(String catTitle, String todoTitle) {
+        Response list = ApiClient.request().get("/todos");
+        String todoId = list.jsonPath().getString("todos.find { it.title == '" + todoTitle + "' }.id");
+        String body = String.format("{\"title\":\"%s\"}", escapeJson(catTitle));
         TestContext.lastResponse = ApiClient.request().body(body).post("/todos/" + todoId + "/categories");
     }
 
-    @When("I attempt to add a category without a title to todo {string}")
-    public void addCategoryWithoutTitleToTodo(String todoTitle) {
-        String todoId = getTodoIdByTitle(todoTitle);
-        TestContext.lastResponse = ApiClient.request()
-                .body("{\"description\":\"missing title\"}")
-                .post("/todos/" + todoId + "/categories");
-    }
-
-    @When("I attempt to add an existing category with id {string} to todo {string}")
-    public void addExistingCategoryIdToTodo(String categoryId, String todoTitle) {
-        String todoId = getTodoIdByTitle(todoTitle);
-        String body = String.format("{\"id\":\"%s\"}", escapeJson(categoryId));
+    @When("I attempt to add a category {string} to todo {string}")
+    public void attemptInvalidCategory(String type, String todoTitle) {
+        Response list = ApiClient.request().get("/todos");
+        String todoId = list.jsonPath().getString("todos.find { it.title == '" + todoTitle + "' }.id");
+        String body = type.contains("title") ? "{}" : "{\"id\":\"1\"}";
         TestContext.lastResponse = ApiClient.request().body(body).post("/todos/" + todoId + "/categories");
-    }
-
-    @When("I request categories for todo {string}")
-    public void requestCategoriesForTodo(String todoTitle) {
-        String todoId = getTodoIdByTitle(todoTitle);
-        TestContext.lastResponse = ApiClient.request().get("/todos/" + todoId + "/categories");
     }
 
     @When("I create a todo with title {string} under project {string}")
-    public void createTodoUnderProject(String todoTitle, String projectTitle) {
-        String projectId = getProjectIdByTitle(projectTitle);
-        String body = String.format("{\"title\":\"%s\",\"description\":\"\"}", escapeJson(todoTitle));
-        TestContext.lastResponse = ApiClient.request().body(body).post("/projects/" + projectId + "/tasks");
+    public void createTodoUnderProject(String todoTitle, String projTitle) {
+        Response list = ApiClient.request().get("/projects");
+        String projId = list.jsonPath().getString("projects.find { it.title == '" + projTitle + "' }.id");
+        String body = String.format("{\"title\":\"%s\"}", escapeJson(todoTitle));
+        TestContext.lastResponse = ApiClient.request().body(body).post("/projects/" + projId + "/tasks");
     }
 
     @When("I request tasks for project {string}")
-    public void requestTasksForProject(String projectTitle) {
-        String projectId = getProjectIdByTitle(projectTitle);
-        TestContext.lastResponse = ApiClient.request().get("/projects/" + projectId + "/tasks");
+    public void requestTasksForProject(String title) {
+        Response list = ApiClient.request().get("/projects");
+        String projId = list.jsonPath().getString("projects.find { it.title == '" + title + "' }.id");
+        TestContext.lastResponse = ApiClient.request().get("/projects/" + projId + "/tasks");
     }
 
     @When("I attempt to add an existing todo with id {string} as a task to project {string}")
-    public void attemptAddExistingTodoIdAsProjectTask(String todoId, String projectTitle) {
-        String projectId = getProjectIdByTitle(projectTitle);
-        String body = String.format("{\"id\":\"%s\"}", escapeJson(todoId));
-        TestContext.lastResponse = ApiClient.request().body(body).post("/projects/" + projectId + "/tasks");
+    public void attemptAddTodoWithIdToProject(String id, String projTitle) {
+        Response list = ApiClient.request().get("/projects");
+        String projId = list.jsonPath().getString("projects.find { it.title == '" + projTitle + "' }.id");
+        String body = String.format("{\"id\":\"%s\"}", id);
+        TestContext.lastResponse = ApiClient.request().body(body).post("/projects/" + projId + "/tasks");
+    }
+
+    @When("I request categories for todo {string}")
+    public void i_request_categories_for_todo(String title) {
+        Response list = ApiClient.request().get("/todos");
+        String id = list.jsonPath().getString("todos.find { it.title == '" + title + "' }.id");
+        TestContext.lastResponse = ApiClient.request().get("/todos/" + id + "/categories");
     }
 
     // --- THEN STEPS ---
