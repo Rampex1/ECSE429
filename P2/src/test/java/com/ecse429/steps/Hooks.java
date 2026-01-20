@@ -15,5 +15,7 @@ public class Hooks {
     @Before
     public void setup() {
         ApiClient.clearAllTodos();
+        ApiClient.clearAllCategories();
+        ApiClient.clearAllProjects();
     }
 }

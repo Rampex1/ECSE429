@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ecse429.CucumberTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.439 s -- in com.ecse429.CucumberTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.397 s -- in com.ecse429.CucumberTest

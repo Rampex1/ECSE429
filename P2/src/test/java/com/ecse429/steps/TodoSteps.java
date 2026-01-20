@@ -51,6 +51,19 @@ public class TodoSteps {
         }
     }
 
+    @Given("the following projects exist in the system:")
+    public void createExistingProjects(DataTable dataTable) {
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+        for (Map<String, String> row : rows) {
+            String title = row.get("title");
+            Assertions.assertNotNull(title, "project title missing in DataTable");
+
+            String description = row.getOrDefault("description", "");
+            String body = String.format("{\"title\":\"%s\",\"description\":\"%s\"}", escapeJson(title), escapeJson(description));
+            ApiClient.request().body(body).post("/projects");
+        }
+    }
+
     // --- WHEN STEPS ---
 
     @When("I create a todo with title {string} and description {string}")
@@ -147,6 +160,54 @@ public class TodoSteps {
         TestContext.lastResponse = ApiClient.request().delete("/todos/" + id);
     }
 
+    @When("I add a new category with title {string} to todo {string}")
+    public void addNewCategoryToTodo(String categoryTitle, String todoTitle) {
+        String todoId = getTodoIdByTitle(todoTitle);
+        String body = String.format("{\"title\":\"%s\",\"description\":\"\"}", escapeJson(categoryTitle));
+        TestContext.lastResponse = ApiClient.request().body(body).post("/todos/" + todoId + "/categories");
+    }
+
+    @When("I attempt to add a category without a title to todo {string}")
+    public void addCategoryWithoutTitleToTodo(String todoTitle) {
+        String todoId = getTodoIdByTitle(todoTitle);
+        TestContext.lastResponse = ApiClient.request()
+                .body("{\"description\":\"missing title\"}")
+                .post("/todos/" + todoId + "/categories");
+    }
+
+    @When("I attempt to add an existing category with id {string} to todo {string}")
+    public void addExistingCategoryIdToTodo(String categoryId, String todoTitle) {
+        String todoId = getTodoIdByTitle(todoTitle);
+        String body = String.format("{\"id\":\"%s\"}", escapeJson(categoryId));
+        TestContext.lastResponse = ApiClient.request().body(body).post("/todos/" + todoId + "/categories");
+    }
+
+    @When("I request categories for todo {string}")
+    public void requestCategoriesForTodo(String todoTitle) {
+        String todoId = getTodoIdByTitle(todoTitle);
+        TestContext.lastResponse = ApiClient.request().get("/todos/" + todoId + "/categories");
+    }
+
+    @When("I create a todo with title {string} under project {string}")
+    public void createTodoUnderProject(String todoTitle, String projectTitle) {
+        String projectId = getProjectIdByTitle(projectTitle);
+        String body = String.format("{\"title\":\"%s\",\"description\":\"\"}", escapeJson(todoTitle));
+        TestContext.lastResponse = ApiClient.request().body(body).post("/projects/" + projectId + "/tasks");
+    }
+
+    @When("I request tasks for project {string}")
+    public void requestTasksForProject(String projectTitle) {
+        String projectId = getProjectIdByTitle(projectTitle);
+        TestContext.lastResponse = ApiClient.request().get("/projects/" + projectId + "/tasks");
+    }
+
+    @When("I attempt to add an existing todo with id {string} as a task to project {string}")
+    public void attemptAddExistingTodoIdAsProjectTask(String todoId, String projectTitle) {
+        String projectId = getProjectIdByTitle(projectTitle);
+        String body = String.format("{\"id\":\"%s\"}", escapeJson(todoId));
+        TestContext.lastResponse = ApiClient.request().body(body).post("/projects/" + projectId + "/tasks");
+    }
+
     // --- THEN STEPS ---
 
     @Then("the response status code should be {int}")
@@ -189,6 +250,25 @@ public class TodoSteps {
     public void todoShouldNoLongerExist(String title) {
         Response res = ApiClient.request().get("/todos/" + TestContext.lastId);
         Assertions.assertEquals(404, res.getStatusCode());
+    }
+
+    @Then("the response should contain category {string}")
+    public void responseShouldContainCategory(String categoryTitle) {
+        TestContext.lastResponse.then().body(containsString(categoryTitle));
+    }
+
+    private static String getTodoIdByTitle(String title) {
+        Response list = ApiClient.request().get("/todos");
+        String id = list.jsonPath().getString("todos.find { it.title == '" + title + "' }.id");
+        Assertions.assertNotNull(id, "No todo found with title: " + title);
+        return id;
+    }
+
+    private static String getProjectIdByTitle(String title) {
+        Response list = ApiClient.request().get("/projects");
+        String id = list.jsonPath().getString("projects.find { it.title == '" + title + "' }.id");
+        Assertions.assertNotNull(id, "No project found with title: " + title);
+        return id;
     }
 
     private static String escapeJson(String value) {

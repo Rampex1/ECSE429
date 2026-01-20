@@ -18,6 +18,20 @@ public class ApiClient {
             request().delete("/todos/" + id);
         });
     }
+
+    public static void clearAllCategories() {
+        Response response = request().get("/categories");
+        response.jsonPath().getList("categories.id").forEach(id -> {
+            request().delete("/categories/" + id);
+        });
+    }
+
+    public static void clearAllProjects() {
+        Response response = request().get("/projects");
+        response.jsonPath().getList("projects.id").forEach(id -> {
+            request().delete("/projects/" + id);
+        });
+    }
     
     public static boolean isServerRunning() {
         try {
