@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.ecse429.TodoNonFunctionalTest
--------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.118 s -- in com.ecse429.TodoNonFunctionalTest

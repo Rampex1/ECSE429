@@ -1,6 +1,6 @@
 com/ecse429/steps/TodoSteps.class
 com/ecse429/CucumberTest.class
 com/ecse429/api/ApiClient.class
+com/ecse429/TodoPerformanceTest.class
 com/ecse429/steps/Hooks.class
-com/ecse429/TodoNonFunctionalTest.class
 com/ecse429/steps/TestContext.class
