@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.ecse429.CucumberTest" time="2.768" tests="20" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/davidzh/Documents/GitHub/ECSE429/P3/target/test-classes:/Users/davidzh/Documents/GitHub/ECSE429/P3/target/classes:/Users/davidzh/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/davidzh/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/davidzh/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/davidzh/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/davidzh/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/davidzh/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/davidzh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.1/cucumber-junit-platform-engine-7.11.1.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/davidzh/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/davidzh/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/davidzh/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/davidzh/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/davidzh/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/davidzh/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/davidzh/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/davidzh/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/davidzh/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/davidzh/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/davidzh/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/davidzh/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/davidzh/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/davidzh/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/davidzh/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/davidzh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/davidzh/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/davidzh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/davidzh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/davidzh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/davidzh/Documents/GitHub/ECSE429/P3/target/surefire/surefirebooter-20260121171524001_3.jar /Users/davidzh/Documents/GitHub/ECSE429/P3/target/surefire 2026-01-21T17-15-23_943-jvmRun1 surefire-20260121171524001_1tmp surefire_0-20260121171524001_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/davidzh/Documents/GitHub/ECSE429/P3/target/test-classes:/Users/davidzh/Documents/GitHub/ECSE429/P3/target/classes:/Users/davidzh/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/davidzh/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/davidzh/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/davidzh/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/davidzh/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/davidzh/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/davidzh/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/davidzh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/davidzh/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.1/cucumber-junit-platform-engine-7.11.1.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/davidzh/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/davidzh/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/davidzh/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/davidzh/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/davidzh/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/davidzh/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/davidzh/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/davidzh/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/davidzh/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/davidzh/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/davidzh/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/davidzh/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/davidzh/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/davidzh/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/davidzh/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/davidzh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/davidzh/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/davidzh/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/davidzh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/davidzh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/davidzh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/davidzh"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/davidzh/Documents/GitHub/ECSE429/P3"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/davidzh/Documents/GitHub/ECSE429/P3/target/surefire/surefirebooter-20260121171524001_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23.0.2"/>
+    <property name="user.name" value="davidzh"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="14.6.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/davidzh/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/d1/2l5cmdrj0m316dbl8jl4rk9w0000gn/T/"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="/Users/davidzh/Documents/GitHub/ECSE429/P3"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/davidzh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="23.0.2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="Example #1.1" classname="Examples" time="0.415">
+    <system-out><![CDATA[
+Scenario Outline: Create a valid todo (Normal Flow)                        &amp#27;[90m# features/create_todo.feature:16&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                        &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI create a todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Buy milk"&amp#27;[0m&amp#27;[32m and description &amp#27;[0m&amp#27;[32m&amp#27;[1m"Need 2% fat"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.createTodo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m                              &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Buy milk"&amp#27;[0m                         &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe todo should exist in the system&amp#27;[0m                                  &amp#27;[90m# com.ecse429.steps.TodoSteps.todoShouldExistInSystem()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.058">
+    <system-out><![CDATA[
+Scenario Outline: Create a todo with XML (Alternate Flow)          &amp#27;[90m# features/create_todo.feature:27&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI create a todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Submit Report"&amp#27;[0m&amp#27;[32m using XML format&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.createTodoXml(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m                      &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Submit Report"&amp#27;[0m            &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.088">
+    <system-out><![CDATA[
+Scenario Outline: Create a todo with invalid data (Error Flow)                       &amp#27;[90m# features/create_todo.feature:37&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                  &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI attempt to create a todo with no title and only description &amp#27;[0m&amp#27;[32m&amp#27;[1m"Missing Title"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.createTodoNoTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m400&amp#27;[0m                                        &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"title : field is mandatory"&amp#27;[0m         &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.087">
+    <system-out><![CDATA[
+Scenario Outline: Delete a todo (Normal Flow)     &amp#27;[90m# features/delete_todo.feature:18&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m               &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m    &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title     |
+    | Temp Task |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI delete the todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Temp Task"&amp#27;[0m   &amp#27;[90m# com.ecse429.steps.TodoSteps.deleteByTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m     &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"Temp Task"&amp#27;[0m&amp#27;[32m should no longer exist&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.todoShouldNoLongerExist(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.069">
+    <system-out><![CDATA[
+Scenario Outline: Delete the same todo twice (Alternate Flow) &amp#27;[90m# features/delete_todo.feature:28&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                           &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m                &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title     |
+    | Temp Task |
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI delete the todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Temp Task"&amp#27;[0m              &amp#27;[90m# com.ecse429.steps.TodoSteps.deleteByTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI delete the todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Temp Task"&amp#27;[0m&amp#27;[32m again&amp#27;[0m         &amp#27;[90m# com.ecse429.steps.TodoSteps.deleteSameTodoAgain(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m404&amp#27;[0m                 &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.047">
+    <system-out><![CDATA[
+Scenario Outline: Delete with invalid ID (Error Flow) &amp#27;[90m# features/delete_todo.feature:37&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                   &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m        &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title     |
+    | Temp Task |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI delete the todo with ID &amp#27;[0m&amp#27;[32m&amp#27;[1m"invalid"&amp#27;[0m            &amp#27;[90m# com.ecse429.steps.TodoSteps.deleteById(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m404&amp#27;[0m         &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.063">
+    <system-out><![CDATA[
+Scenario Outline: Add a category to an existing todo (Normal Flow)                  &amp#27;[90m# features/relationships.feature:20&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                 &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m                                    &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title            |
+    | ECSE429_REL_TODO |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI add a new category with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_CAT"&amp#27;[0m&amp#27;[32m to todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TODO"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.addNewCategoryToTodo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m                                       &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_CAT"&amp#27;[0m                           &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.076">
+    <system-out><![CDATA[
+Scenario Outline: View categories for a todo (Alternate Flow)                      &amp#27;[90m# features/relationships.feature:34&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m                                   &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title            |
+    | ECSE429_REL_TODO |
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI add a new category with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_CAT"&amp#27;[0m&amp#27;[32m to todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TODO"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.addNewCategoryToTodo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI request categories for todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TODO"&amp#27;[0m                            &amp#27;[90m# com.ecse429.steps.TodoSteps.i_request_categories_for_todo(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                      &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain category &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_CAT"&amp#27;[0m                       &amp#27;[90m# com.ecse429.steps.TodoSteps.responseShouldContainCategory(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.074">
+    <system-out><![CDATA[
+Scenario Outline: Add a category with invalid data (Error Flow)                 &amp#27;[90m# features/relationships.feature:47&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                             &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m                                &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title            |
+    | ECSE429_REL_TODO |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI attempt to add a category &amp#27;[0m&amp#27;[32m&amp#27;[1m"without a title"&amp#27;[0m&amp#27;[32m to todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TODO"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.attemptInvalidCategory(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m400&amp#27;[0m                                   &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"title : field is mandatory"&amp#27;[0m    &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.077">
+    <system-out><![CDATA[
+Scenario Outline: Create a task under a project (Normal Flow)                            &amp#27;[90m# features/relationships.feature:63&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                      &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe following projects exist in the system:&amp#27;[0m                                      &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingProjects(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title               |
+    | ECSE429_REL_PROJECT |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI create a todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TASK"&amp#27;[0m&amp#27;[32m under project &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_PROJECT"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.createTodoUnderProject(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m                                            &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TASK"&amp#27;[0m                               &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.08">
+    <system-out><![CDATA[
+Scenario Outline: View all tasks for a project (Alternate Flow)                         &amp#27;[90m# features/relationships.feature:77&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                     &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe following projects exist in the system:&amp#27;[0m                                     &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingProjects(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title               |
+    | ECSE429_REL_PROJECT |
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI create a todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TASK"&amp#27;[0m&amp#27;[32m under project &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_PROJECT"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.createTodoUnderProject(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI request tasks for project &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_PROJECT"&amp#27;[0m                                &amp#27;[90m# com.ecse429.steps.TodoSteps.requestTasksForProject(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                                           &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TASK"&amp#27;[0m                              &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.084">
+    <system-out><![CDATA[
+Scenario Outline: Attempt to add project task with ID (Error Flow)                              &amp#27;[90m# features/relationships.feature:90&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                             &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe following projects exist in the system:&amp#27;[0m                                             &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingProjects(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title               |
+    | ECSE429_REL_PROJECT |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI attempt to add an existing todo with id &amp#27;[0m&amp#27;[32m&amp#27;[1m"1"&amp#27;[0m&amp#27;[32m as a task to project &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_PROJECT"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.attemptAddTodoWithIdToProject(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m400&amp#27;[0m                                                   &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Not allowed to create with id"&amp#27;[0m                 &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.083">
+    <system-out><![CDATA[
+Scenario Outline: Mark todo as done (Normal Flow)                &amp#27;[90m# features/update_todo.feature:18&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                              &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m                   &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title       | doneStatus |
+    | Office Work | false      |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI update the todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office Work"&amp#27;[0m&amp#27;[32m to have doneStatus &amp#27;[0m&amp#27;[32m&amp#27;[1m"true"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.updateTodoDoneStatus(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m                    &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office Work"&amp#27;[0m&amp#27;[32m should have status &amp#27;[0m&amp#27;[32m&amp#27;[1m"true"&amp#27;[0m           &amp#27;[90m# com.ecse429.steps.TodoSteps.todoShouldHaveStatus(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.072">
+    <system-out><![CDATA[
+Scenario Outline: Rename an existing todo (Alternate Flow) &amp#27;[90m# features/update_todo.feature:28&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                        &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m             &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title       | doneStatus |
+    | Office Work | false      |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI change the title of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Office Work"&amp#27;[0m&amp#27;[32m to &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home Work"&amp#27;[0m  &amp#27;[90m# com.ecse429.steps.TodoSteps.changeTodoTitle(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m              &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Home Work"&amp#27;[0m        &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.047">
+    <system-out><![CDATA[
+Scenario Outline: Update invalid todo (Error Flow)           &amp#27;[90m# features/update_todo.feature:37&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                          &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m               &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title       | doneStatus |
+    | Office Work | false      |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI try to update todo with ID &amp#27;[0m&amp#27;[32m&amp#27;[1m"12345"&amp#27;[0m&amp#27;[32m to title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Ghost"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.tryUpdateNonexistentTodo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m404&amp#27;[0m                &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.053">
+    <system-out><![CDATA[
+Scenario Outline: Retrieve all todos (Normal Flow) &amp#27;[90m# features/view_todos.feature:19&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m     &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title  | doneStatus |
+    | Task 1 | false      |
+    | Task 2 | true       |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI request all todos&amp#27;[0m                         &amp#27;[90m# com.ecse429.steps.TodoSteps.getAllTodos()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m      &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain &amp#27;[0m&amp#27;[32m&amp#27;[1m"2"&amp#27;[0m&amp#27;[32m todos&amp#27;[0m        &amp#27;[90m# com.ecse429.steps.TodoSteps.responseShouldContainTodos(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.065">
+    <system-out><![CDATA[
+Scenario Outline: Retrieve a specific todo (Alternate Flow) &amp#27;[90m# features/view_todos.feature:29&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                         &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m              &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title  | doneStatus |
+    | Task 1 | false      |
+    | Task 2 | true       |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI request the todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Task 1"&amp#27;[0m               &amp#27;[90m# com.ecse429.steps.TodoSteps.getTodoByTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m200&amp#27;[0m               &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Task 1"&amp#27;[0m            &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="0.059">
+    <system-out><![CDATA[
+Scenario Outline: Retrieve non-existent todo (Error Flow)                                     &amp#27;[90m# features/view_todos.feature:39&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                           &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m                                                &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title  | doneStatus |
+    | Task 1 | false      |
+    | Task 2 | true       |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI request a todo with invalid ID &amp#27;[0m&amp#27;[32m&amp#27;[1m"99999"&amp#27;[0m                                               &amp#27;[90m# com.ecse429.steps.TodoSteps.requestTodoWithInvalidId(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m404&amp#27;[0m                                                 &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Could not find an instance with todos/99999"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.08">
+    <system-out><![CDATA[
+Scenario Outline: Create a valid todo (Normal Flow)                                &amp#27;[90m# features/create_todo.feature:17&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                                &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI create a todo with title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE 429"&amp#27;[0m&amp#27;[32m and description &amp#27;[0m&amp#27;[32m&amp#27;[1m"Finish assignment 1"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.createTodo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m201&amp#27;[0m                                      &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain title &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE 429"&amp#27;[0m                                 &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe todo should exist in the system&amp#27;[0m                                          &amp#27;[90m# com.ecse429.steps.TodoSteps.todoShouldExistInSystem()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="0.082">
+    <system-out><![CDATA[
+Scenario Outline: Add a category with invalid data (Error Flow)                 &amp#27;[90m# features/relationships.feature:48&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe todo service is running&amp#27;[0m                                             &amp#27;[90m# com.ecse429.steps.TodoSteps.serviceRunning()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mthe following todos exist in the system:&amp#27;[0m                                &amp#27;[90m# com.ecse429.steps.TodoSteps.createExistingTodos(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | title            |
+    | ECSE429_REL_TODO |
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI attempt to add a category &amp#27;[0m&amp#27;[32m&amp#27;[1m"with an id"&amp#27;[0m&amp#27;[32m to todo &amp#27;[0m&amp#27;[32m&amp#27;[1m"ECSE429_REL_TODO"&amp#27;[0m      &amp#27;[90m# com.ecse429.steps.TodoSteps.attemptInvalidCategory(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe response status code should be &amp#27;[0m&amp#27;[32m&amp#27;[1m400&amp#27;[0m                                   &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyStatusCode(int)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe response should contain error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Not allowed to create with id"&amp#27;[0m &amp#27;[90m# com.ecse429.steps.TodoSteps.verifyError(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+</testsuite>
