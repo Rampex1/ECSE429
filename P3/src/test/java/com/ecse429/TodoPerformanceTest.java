@@ -2,7 +2,9 @@ package com.ecse429;
 
 import org.junit.jupiter.api.*;
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -17,16 +19,31 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TodoPerformanceTest {
 
     private static final String BASE_URL = "http://localhost:4567";
+    private static final String RESULTS_CSV = "test_results.csv";
     private static HttpClient client;
     private static Random random = new Random();
     private static List<String> createdIds = new ArrayList<>();
+    private static PrintWriter csvWriter;
 
     @BeforeAll
-    static void setupClient() {
+    static void setupClient() throws Exception {
         client = HttpClient.newHttpClient();
+        
+        // Initialize CSV file
+        csvWriter = new PrintWriter(new FileWriter(RESULTS_CSV));
+        csvWriter.println("TestName,Operation,ObjectCount,TotalTime_ms,AvgTime_ms,UsedMemory_MB,FreeMemory_MB,TotalMemory_MB");
+        
         System.out.println("=".repeat(80));
         System.out.println("TODO API PERFORMANCE TEST SUITE");
         System.out.println("=".repeat(80));
+    }
+
+    @AfterAll
+    static void cleanup() {
+        if (csvWriter != null) {
+            csvWriter.close();
+        }
+        System.out.println("\nResults written to " + RESULTS_CSV);
     }
 
     @BeforeEach
@@ -155,39 +172,51 @@ public class TodoPerformanceTest {
             usedMemory, freeMemory, totalMemory);
     }
 
+    private static void logResults(String testName, String operation, int count, long duration) {
+        Runtime runtime = Runtime.getRuntime();
+        long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / (1024 * 1024);
+        long freeMemory = runtime.freeMemory() / (1024 * 1024);
+        long totalMemory = runtime.totalMemory() / (1024 * 1024);
+        double avgTime = (double) duration / count;
+        
+        csvWriter.printf("%s,%s,%d,%d,%.2f,%d,%d,%d%n",
+            testName, operation, count, duration, avgTime, usedMemory, freeMemory, totalMemory);
+        csvWriter.flush();
+    }
+
     // ========== CREATE PERFORMANCE TESTS ==========
 
     @Test
     @Order(1)
     void createPerformance_50Objects() throws Exception {
-        measureCreatePerformance(50);
+        measureCreatePerformance(50, "Create_50");
     }
 
     @Test
     @Order(2)
     void createPerformance_100Objects() throws Exception {
-        measureCreatePerformance(100);
+        measureCreatePerformance(100, "Create_100");
     }
 
     @Test
     @Order(3)
     void createPerformance_200Objects() throws Exception {
-        measureCreatePerformance(200);
+        measureCreatePerformance(200, "Create_200");
     }
 
     @Test
     @Order(4)
     void createPerformance_500Objects() throws Exception {
-        measureCreatePerformance(500);
+        measureCreatePerformance(500, "Create_500");
     }
 
     @Test
     @Order(5)
     void createPerformance_1000Objects() throws Exception {
-        measureCreatePerformance(1000);
+        measureCreatePerformance(1000, "Create_1000");
     }
 
-    private void measureCreatePerformance(int count) throws Exception {
+    private void measureCreatePerformance(int count, String testName) throws Exception {
         System.out.printf("%n[CREATE TEST] Creating %d todos with random data...%n", count);
         
         long startTime = System.currentTimeMillis();
@@ -203,6 +232,8 @@ public class TodoPerformanceTest {
         System.out.printf("[RESULT] Total time: %d ms | Average per object: %.2f ms%n", 
             duration, avgTime);
         
+        logResults(testName, "CREATE", count, duration);
+        
         assertEquals(count, createdIds.size());
     }
 
@@ -211,28 +242,28 @@ public class TodoPerformanceTest {
     @Test
     @Order(6)
     void updatePerformance_50Objects() throws Exception {
-        measureUpdatePerformance(50);
+        measureUpdatePerformance(50, "Update_50");
     }
 
     @Test
     @Order(7)
     void updatePerformance_100Objects() throws Exception {
-        measureUpdatePerformance(100);
+        measureUpdatePerformance(100, "Update_100");
     }
 
     @Test
     @Order(8)
     void updatePerformance_200Objects() throws Exception {
-        measureUpdatePerformance(200);
+        measureUpdatePerformance(200, "Update_200");
     }
 
     @Test
     @Order(9)
     void updatePerformance_500Objects() throws Exception {
-        measureUpdatePerformance(500);
+        measureUpdatePerformance(500, "Update_500");
     }
 
-    private void measureUpdatePerformance(int count) throws Exception {
+    private void measureUpdatePerformance(int count, String testName) throws Exception {
         System.out.printf("%n[UPDATE TEST] Updating %d todos with random data...%n", count);
         
         // First create the objects
@@ -253,6 +284,8 @@ public class TodoPerformanceTest {
         
         System.out.printf("[RESULT] Total time: %d ms | Average per object: %.2f ms%n", 
             duration, avgTime);
+        
+        logResults(testName, "UPDATE", count, duration);
     }
 
     // ========== DELETE PERFORMANCE TESTS ==========
@@ -260,28 +293,28 @@ public class TodoPerformanceTest {
     @Test
     @Order(10)
     void deletePerformance_50Objects() throws Exception {
-        measureDeletePerformance(50);
+        measureDeletePerformance(50, "Delete_50");
     }
 
     @Test
     @Order(11)
     void deletePerformance_100Objects() throws Exception {
-        measureDeletePerformance(100);
+        measureDeletePerformance(100, "Delete_100");
     }
 
     @Test
     @Order(12)
     void deletePerformance_200Objects() throws Exception {
-        measureDeletePerformance(200);
+        measureDeletePerformance(200, "Delete_200");
     }
 
     @Test
     @Order(13)
     void deletePerformance_500Objects() throws Exception {
-        measureDeletePerformance(500);
+        measureDeletePerformance(500, "Delete_500");
     }
 
-    private void measureDeletePerformance(int count) throws Exception {
+    private void measureDeletePerformance(int count, String testName) throws Exception {
         System.out.printf("%n[DELETE TEST] Deleting %d todos...%n", count);
         
         // First create the objects
@@ -302,6 +335,8 @@ public class TodoPerformanceTest {
         
         System.out.printf("[RESULT] Total time: %d ms | Average per object: %.2f ms%n", 
             duration, avgTime);
+        
+        logResults(testName, "DELETE", count, duration);
     }
 
     // ========== COMBINED SCALABILITY TEST ==========
@@ -324,6 +359,7 @@ public class TodoPerformanceTest {
                 createTodoWithRandomData();
             }
             long createTime = System.currentTimeMillis() - createStart;
+            logResults("Comprehensive_" + size, "CREATE", size, createTime);
             
             // UPDATE
             long updateStart = System.currentTimeMillis();
@@ -331,6 +367,7 @@ public class TodoPerformanceTest {
                 updateTodo(id);
             }
             long updateTime = System.currentTimeMillis() - updateStart;
+            logResults("Comprehensive_" + size, "UPDATE", size, updateTime);
             
             // DELETE
             long deleteStart = System.currentTimeMillis();
@@ -338,6 +375,7 @@ public class TodoPerformanceTest {
                 deleteTodo(id);
             }
             long deleteTime = System.currentTimeMillis() - deleteStart;
+            logResults("Comprehensive_" + size, "DELETE", size, deleteTime);
             
             System.out.printf("CREATE: %d ms (%.2f ms/obj) | UPDATE: %d ms (%.2f ms/obj) | DELETE: %d ms (%.2f ms/obj)%n",
                 createTime, (double)createTime/size,
